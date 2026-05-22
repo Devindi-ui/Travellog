@@ -5,7 +5,7 @@ import TourCard from "./TourCard";
 const Hero = () => {
     return (
         <section 
-            className="relative h-screen bg-cover bg-center"
+            className="relative min-h-[140vh] bg-cover bg-center"
             style={{
                 backgroundImage:
                     "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop')",
@@ -18,7 +18,7 @@ const Hero = () => {
             <Navbar/>
 
             {/* Main Content */}
-            <div className="relative z-10 px-6 md:px-12 pt-40 pb-20">
+            <div className="relative z-10 px-6 md:px-12 pt-40 pb-40">
 
                 {/* Heading */}
                 <div className="text-center max-w-4xl mx-auto">
