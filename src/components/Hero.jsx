@@ -1,5 +1,6 @@
 import { section } from "framer-motion/client";
 import Navbar from "./Navbar";
+import TourCard from "./TourCard";
 
 const Hero = () => {
     return (
@@ -16,24 +17,52 @@ const Hero = () => {
             {/* Navbar */}
             <Navbar/>
 
-            {/* Hero Content */}
-            <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+            {/* Main Content */}
+            <div className="relative z-10 px-6 md:px-12 pt-40 pb-20">
 
-                <p className="text-white/80 mb-4 tracking-widest uppercase">
-                    Natural Wonder
-                </p>
+                {/* Heading */}
+                <div className="text-center max-w-4xl mx-auto">
+                    <p className="text-white/80 mb-4 tracking-[4px] uppercase">
+                        Explore Sri Lanka
+                    </p>
 
-                <h1 className="text-white text-5xl md:text-7xl font-semibold leading-tight max-w-4xl">
-                    Unforgettable Travel Experience
-                </h1>
+                    <h1 className="text-white text-5xl md:text-7xl font-semibold leading-tight">
+                        Discover The Beauty Of Sri Lanka
+                    </h1>
 
-                <p className="text-white/70 mt-6 max-w-2xl text-lg">
-                    Explore new travel ideas with us by mountains, waterfalls, sun views and the sea in Sri Lanka.
-                </p>
+                    <p className="text-white/70 mt-6 max-w-2xl text-lg mx-auto">
+                        Experience golden beaches, misty mountains, ancient cities, 
+                        and unforgettable adventures across paradise island.
+                    </p>
 
-                <div className="mt-8 bg-white text-black px-8 py-4 rounded-fullhover:scale-105 transition duration-300">
-                    Explore Tours
+                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full hover:scale-105 transition duration-300">
+                        Explore Tours
+                    </button>
                 </div>
+
+                {/* Floating Cards */}
+                <div className="mt-24 flex flex-wrap justify-center gap-6">
+
+                    <TourCard
+                        image="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=987&auto=format&fit=crop"
+                        title="Ella Adventure"
+                        description="Explore stunning mountain views and train journeys."                    
+                    />
+
+                    <TourCard
+                        image="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=987&auto=format&fit=crop"
+                        title="Sigiriya Rock"
+                        description="Discover Sri Lanka's iconic ancient rock fortress."                   
+                    />
+
+                    <TourCard
+                        image="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=987&auto=format&fit=crop"
+                        title="Mirissa Beach"
+                        description="Relax with tropical sunsets and whale watching."
+                    />
+
+                </div>
+
             </div>
 
         </section>
