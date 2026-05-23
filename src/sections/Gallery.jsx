@@ -1,23 +1,38 @@
 const galleryImages = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1170&auto=format&fit=crop",
-        title: "Mirissa",
+        image: "/images/ba1.png",
+        title: "Baththalangunduwa",
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1170&auto=format&fit=crop",
-        title: "Ella",  
+        image: "/images/bell3.png",
+        title: "Bellwood",  
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1170&auto=format&fit=crop",
-        title: "Sigiriya",
+        image: "/images/char4.png",
+        title: "Chariot Path",
     },
     {
         id: 4,
-        image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1170&auto=format&fit=crop",
-        title: "Nuwara Eliya",
+        image: "/images/mas4.png",
+        title: "Maskeliya",
+    },
+    {
+        id: 5,
+        image: "/images/loo3.png",
+        title: "Loolkandura",
+    },
+    {
+        id: 6,
+        image: "/images/pl3.png",
+        title: "Madulsima",
+    },
+    {
+        id: 7,
+        image: "/images/riv1.png",
+        title: "Riverston",
     },
 ];
 
@@ -58,7 +73,7 @@ const Gallery = () => {
                             <img 
                                 src={item.image} 
                                 alt={item.title}
-                                className="w-full h-full object-cover group-hover:scale-110 transition duration-700" 
+                                className="w-full h-full group-hover:scale-110 transition duration-700" 
                             />
 
                             {/* overlay */}

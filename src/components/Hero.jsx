@@ -45,7 +45,7 @@ const Hero = () => {
 
                     <TourCard
                         image="https://images.unsplash.com/photo-1586500036706-41963de24d8b?q=80&w=987&auto=format&fit=crop"
-                        title="Ella Adventure"
+                        title="Baththalangunduwa Tour"
                         description="Explore stunning mountain views and train journeys."                    
                     />
 

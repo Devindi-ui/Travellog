@@ -3,28 +3,42 @@ import { image } from "framer-motion/client";
 const packages = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1170&auto=format&fit=crop",
+        image: "/images/jaf1.png",
         title: "Jaffna Tour",
         duration: "3 Days",
-        price: "$180",
+        price: "Rs 18,500/=",
     },
 
     {
         id: 2,
-        image:
-        "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1170&auto=format&fit=crop",
-        title: "Ella Mountain Journey",
-        duration: "5 Days",
-        price: "$250",
+        image: "/images/walapane.png",
+        title: "Walapane Tour",
+        duration: "June 27/28",
+        price: "Rs 9499/=",
     },
 
     {
         id: 3,
-        image:
-        "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1170&auto=format&fit=crop",
-        title: "Sigiriya Heritage Tour",
-        duration: "2 Days",
-        price: "$150",
+        image: "/images/diyaluma.png",
+        title: "Diyaluma Tour",
+        duration: "June 20",
+        price: "Rs 7800/=",
+    },
+
+    {
+        id: 4,
+        image: "/images/narangala.png",
+        title: "Narangala Hike",
+        duration: "June 06",
+        price: "Rs 7800/=",
+    },
+
+    {
+        id: 5,
+        image: "/images/katharagama.png",
+        title: "Katharagama Tour",
+        duration: "July 11/12",
+        price: "Rs 7800/=",
     },
 ];
 
@@ -98,6 +112,7 @@ const Packages = () => {
                     ))}
                 </div>
             </div>
+            
         </section>
     )
 }
