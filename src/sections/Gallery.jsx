@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const galleryImages = [
     {
         id: 1,
@@ -38,9 +40,17 @@ const galleryImages = [
 
 const Gallery = () => {
     return (
-        <section className="py-24 px-6 md:px-12 bg-white">
+        <section 
+            id="gallery"
+            className="py-24 px-6 md:px-12 bg-white">
 
-            <div className="max-w-7xl mx-auto">
+            <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="max-w-7xl mx-auto"
+            >
 
                 {/* Heading */}
                 <div className="text-center mb-16">
@@ -73,7 +83,7 @@ const Gallery = () => {
                             <img 
                                 src={item.image} 
                                 alt={item.title}
-                                className="w-full h-full group-hover:scale-110 transition duration-700" 
+                                className="w-full h-full group-hover:scale-110 group-hover:rotate-1 group transition duration-700" 
                             />
 
                             {/* overlay */}
@@ -90,7 +100,7 @@ const Gallery = () => {
                     ))}
 
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     );

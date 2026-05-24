@@ -23,7 +23,9 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="bg-[#f8f8f8] py-24 px-6 md:px-12">
+        <section 
+            id="testimonials"
+            className="bg-[#f8f8f8] py-24 px-6 md:px-12">
 
             <div className="max-w-7xl mx-auto">
 

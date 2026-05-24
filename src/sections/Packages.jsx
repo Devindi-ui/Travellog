@@ -1,4 +1,5 @@
 import { image } from "framer-motion/client";
+import { motion } from "framer-motion";
 
 const packages = [
     {
@@ -44,10 +45,19 @@ const packages = [
 
 const Packages = () => {
     return (
-        <section className="bg-[#f8f8f8] py-24 px-6 md:px-12">
+        <section 
+            id="packages"
+            className="bg-[#f8f8f8] py-24 px-6 md:px-12"
+        >
 
             {/* Heading */}
-            <div className="max-w-7xl mx-auto">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="max-w-7xl mx-auto"
+            >
 
                 <div className="text-center mb-16">
                     <p className="uppercase tracking-[4px] text-gray-500 mb-4">
@@ -68,9 +78,13 @@ const Packages = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     {packages.map((item) => (
-                        <div 
-                            key={item.id} 
-                            className="bg-white rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300"
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="bg-white rounded-3xl overflow-hidden shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300"
                         >
                             {/* image */}
                             <div className="h-[260px] overflow-hidden">
@@ -108,10 +122,10 @@ const Packages = () => {
                                     
                             </div>
 
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
             
         </section>
     )

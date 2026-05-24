@@ -1,10 +1,12 @@
 import { section } from "framer-motion/client";
+import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import TourCard from "./TourCard";
 
 const Hero = () => {
     return (
         <section 
+            id="home"
             className="relative min-h-[140vh] bg-cover bg-center"
             style={{
                 backgroundImage:
@@ -21,7 +23,13 @@ const Hero = () => {
             <div className="relative z-10 px-6 md:px-12 pt-40 pb-40">
 
                 {/* Heading */}
-                <div className="text-center max-w-4xl mx-auto">
+                <motion.div 
+                    initial={{ opacity: 0, y:40 }}
+                    animate={{ opacity: 1, y:0 }}
+                    transition={{ duration: 1 }}
+                    className="text-center max-w-4xl mx-auto"
+                >
+
                     <p className="text-white/80 mb-4 tracking-[4px] uppercase">
                         Explore Sri Lanka
                     </p>
@@ -35,10 +43,11 @@ const Hero = () => {
                         and unforgettable adventures across paradise island.
                     </p>
 
-                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full hover:scale-105 transition duration-300">
+                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full hover:scale-105 hover:shadow-2xl transition duration-300">
                         Explore Tours
                     </button>
-                </div>
+                    
+                </motion.div>
 
                 {/* Floating Cards */}
                 <div className="mt-24 flex flex-wrap justify-center gap-6">
