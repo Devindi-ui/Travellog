@@ -1,40 +1,49 @@
 import { motion } from "framer-motion";
+import { path } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 const galleryImages = [
     {
         id: 1,
         image: "/images/ba1.png",
         title: "Baththalangunduwa",
+        path: "/gallery/baththalangunduwa",
     },
     {
         id: 2,
         image: "/images/bell3.png",
         title: "Bellwood",  
+        path: "/gallery/bellwood",
     },
     {
         id: 3,
         image: "/images/char4.png",
         title: "Chariot Path",
+        path: "/gallery/chariotpath",
     },
     {
         id: 4,
         image: "/images/mas4.png",
         title: "Maskeliya",
+        path: "/gallery/maskeliya",
     },
     {
         id: 5,
         image: "/images/loo3.png",
         title: "Loolkandura",
+        path: "/gallery/loolkandura",
     },
     {
         id: 6,
         image: "/images/pl3.png",
         title: "Madulsima",
+        path: "/gallery/madulsima",
     },
     {
         id: 7,
         image: "/images/riv1.png",
         title: "Riverston",
+        path: "/gallery/riverston",
     },
 ];
 
@@ -74,9 +83,10 @@ const Gallery = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     {galleryImages.map((item) => (
-                        <div 
+                        <Link 
+                            to={item.path}
                             key={item.id}
-                            className="relative overflow-hidden rounded-3xl group cursor-pointer h-[300px] md:h-[400px]"
+                            className="relative overflow-hidden rounded-3xl group cursor-pointer h-[300px] md:h-[400px] block"
                         >
 
                             {/* image */}
@@ -96,7 +106,7 @@ const Gallery = () => {
                                 </h3>
                             </div>
 
-                        </div>
+                        </Link>
                     ))}
 
                 </div>

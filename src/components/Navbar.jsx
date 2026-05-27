@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -18,27 +19,39 @@ const Navbar = () => {
                 <ul className="hidden md:flex items-center gap-8 text-white text-sm">
 
                     <li>
-                        <a href=""className="hover:text-gray-300 cursor-pointer transition">
+                        <Link 
+                            to="/"
+                            className="hover:text-gray-300 relative after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+                        >
                             Home
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href=""className="hover:text-gray-300 cursor-pointer transition">
+                        <Link 
+                            to="/"
+                            className="hover:text-gray-300relative after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+                        >
                             Packages
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href=""className="hover:text-gray-300 cursor-pointer transition">
+                        <Link 
+                            to="/"
+                            className="hover:text-gray-300relative after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+                        >
                             Gallery
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href=""className="hover:text-gray-300 cursor-pointer transition">
+                        <Link 
+                            to="/"
+                            className="hover:text-gray-300relative after:absolute after:w-0 after:h-[2px] after:bg-white after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+                        >
                             Reviews
-                        </a>
+                        </Link>
                     </li>
 
                 </ul>
@@ -65,19 +78,19 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-6 text-center">
 
                         <li>
-                            <a href="#home">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
 
                         <li>
-                            <a href="#packages">Packages</a>
+                            <Link to="/">Packages</Link>
                         </li>
 
                         <li>
-                            <a href="#gallery">Gallery</a>
+                            <Link to="/">Gallery</Link>
                         </li>
 
                         <li>
-                            <a href="#testimonials">Reviews</a>
+                            <Link to="/">Reviews</Link>
                         </li>
 
                         <button className="bg-white text-black py-3 rounded-full">

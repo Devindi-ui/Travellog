@@ -7,14 +7,14 @@ const Hero = () => {
     return (
         <section 
             id="home"
-            className="relative min-h-[140vh] bg-cover bg-center"
+            className="relative min-h-[100svh] bg-cover bg-center"
             style={{
                 backgroundImage:
-                    "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop')",
+                    "url('/images/main.png')",
                 }}
         >
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
 
             {/* Navbar */}
             <Navbar/>
@@ -43,7 +43,7 @@ const Hero = () => {
                         and unforgettable adventures across paradise island.
                     </p>
 
-                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full hover:scale-105 hover:shadow-2xl transition duration-300">
+                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full hover:scale-105 hover:-translate-y-1 hover:shadow-2xl transition duration-300">
                         Explore Tours
                     </button>
                     

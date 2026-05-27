@@ -1,6 +1,6 @@
 const TourCard = ({image, title, description}) => {
     return (
-        <div className="relative w-[220px] h-[320px] rounded-3xl overflow-hidden group cursor-pointer">
+        <div className="relative w-[220px] h-[320px] rounded-3xl overflow-hidden group cursor-pointer hover:-translate-y-3 translation duration-500">
             
             {/* image */}
             <img 
