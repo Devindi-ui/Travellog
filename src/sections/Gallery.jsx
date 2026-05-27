@@ -45,6 +45,12 @@ const galleryImages = [
         title: "Riverston",
         path: "/gallery/riverston",
     },
+    {
+        id: 8,
+        image: "/images/su4.png",
+        title: "Sudagala Jungle Glamping",
+        path: "/gallery/sudagala",
+    },
 ];
 
 const Gallery = () => {

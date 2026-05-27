@@ -75,6 +75,7 @@ const tours = [
         images: [
             "/images/su1.png",
             "/images/su2.png",
+            "/images/suwf.png",
             "/images/su3.png",
         ],
     },
