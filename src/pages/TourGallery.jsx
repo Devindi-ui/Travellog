@@ -85,8 +85,100 @@ const TourGallery = () => {
 
             </div>
 
+            {/* Hero Banner */}
+            <div className="h-[60vh] rounded-3xl overflow-hidden relative mb-20">
+
+                <img 
+                    src={tour.heroImage} 
+                    alt={tour.title} 
+                    className="w-full h-full object-cover"
+                />
+
+                {/* overlay */}
+                <div className="absolute inset-0 bg-black/50"></div>
+
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+                    <p className="uppercase tracking-[5px] text-gray-300 mb-4">
+                        {tour.location}
+                    </p>
+
+                    <h1 className="text-5xl md:text-7xl font-semibold mb-6">
+                        {tour.title}
+                    </h1>
+
+                    <p className="max-w-2xl text-gray-200 text-lg">
+                        {tour.description}
+                    </p>
+                </div>
+
+            </div>
+
+            {/* Highlights */}
+            <div className="flex flex-wrap gap-4 justify-center mb-20">
+
+                {tour.highlights.map((item,index) => (
+
+                    <div 
+                        key={index}
+                        className="px-6 py-3 bg-white/10 border border-white/20 rounded-full backdrop-blur-md"
+                    >
+                        {item}
+                    </div>
+
+                ))}
+
+            </div>
+
+            {/* Story */}
+            <div className="max-w-4xl mx-auto text-center mb-24">
+
+                <p className="uppercase tracking- text-gray-400 mb-5">
+                    Travel Story
+                </p>
+
+                <h2 className="text-4xl font-semibold mb-8">
+                    The Experience 
+                </h2>
+
+                <p className="text-gray-300 leading-8 text-lg">
+                    {tour.description}
+                </p>
+
+            </div>
+
+            {/* Date + Location */}
+            <div className="flex flex-col sm:flex-row justify-center gap-8 mb-24">
+
+                <div className="bg-white/10 px-8 py-5 rounded-3xl backdrop-blur-md">
+                
+                    <p className="text-gray-400 mb-2">
+                        Location
+                    </p>
+
+                    <h3 className="text-2xl font-semibold">
+                        {tour.location}
+                    </h3>
+
+                </div>
+
+                <div className="bg-white/10 px-8 py-5 rounded-3xl backdrop-blur-md">
+                
+                    <p className="text-gray-400 mb-2">
+                        Travel Date 
+                    </p>
+
+                    <h3 className="text-2xl font-semibold">
+                        {tour.date}
+                    </h3>
+                
+                </div>
+
+            </div>
+
             {/* images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
 
                 {tour.images.map((image, index) => (
                     <div 
@@ -95,13 +187,13 @@ const TourGallery = () => {
                             setSelectedImage(image);
                             setCurrentIndex(index);
                         }}
-                        className="overflow-hidden rounded-3xl group cursor-pointer"
+                        className="overflow-hidden rounded-3xl group cursor-pointer mb-6 break-inside-avoid"
                     >
 
                         <img 
                             src={image}
                             alt={tour.title}
-                            className="w-full h-[350px] object-cover group-hover:scale-110 transition duration-700" 
+                            className="w-full h-auto object-cover group-hover:scale-110 transition duration-700" 
                         />
 
                     </div>
